@@ -22,9 +22,7 @@ if args.download_root_dir == None:
     download_root_dir = input("Please enter path of download root directory. e.g. ./downloads: ")
 else:
     download_root_dir = args.download_root_dir
-download_root_dir = download_root_dir.replace("\\", "/")
-if download_root_dir.endswith("/"):
-    download_root_dir = download_root_dir[:-1]
+download_root_dir = download_root_dir.replace("\\", "/").rstrip("/")
 
 ytsb = YTStickersBackup(user_profile_dir=user_profile_dir)
 

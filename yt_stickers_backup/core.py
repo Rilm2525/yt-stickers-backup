@@ -62,9 +62,7 @@ class YTStickersBackup:
             self.__driver.get("about:blank")
         
     def download(self, download_roor_dir:str, title_url_pair_dict_list: list) -> None:
-        download_roor_dir = download_roor_dir.replace("\\", "/")
-        if download_roor_dir.endswith("/"):
-            download_roor_dir = download_roor_dir[:-1]
+        download_roor_dir = download_roor_dir.replace("\\", "/").rstrip("/")
 
         os.makedirs(download_roor_dir, exist_ok=True)
 
