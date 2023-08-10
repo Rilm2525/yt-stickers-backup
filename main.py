@@ -4,7 +4,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description="Supports command-line arguments.")
 parser.add_argument("--user-profile-dir", "-u", dest="user_profile_dir", type=str, help="Directory path of a Chrome user profile (logged in to YouTube)")
-parser.add_argument("--channel-handles", "-c", dest="channel_handles", type=str, help="Specify the channel handle (e.g. @YTStickersBackup)")
+parser.add_argument("--channel-handles", "-c", dest="channel_handles", type=str, help="Specify the channel handle (e.g. @YTStickersBackup,@YTStickersBackupSub)")
 parser.add_argument("--download-root-dir", "-d", dest="download_root_dir", type=str, help="Specify the download root directory path (e.g. ./downloads)")
 args = parser.parse_args()
     

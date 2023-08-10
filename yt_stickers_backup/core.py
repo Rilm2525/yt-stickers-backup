@@ -7,7 +7,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from yt_stickers_backup.exceptions import *
 import os
 import requests
-import os
 
 class YTStickersBackup:
     def __init__(self, user_profile_dir: str = None) -> None:
