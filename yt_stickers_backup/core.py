@@ -53,7 +53,7 @@ class YTStickersBackup:
             for badges_and_stickers_element in badges_and_stickers_elements:
                 result.append({
                         "title": badges_and_stickers_element.get_attribute("alt"),
-                        "url": "=".join(badges_and_stickers_element.get_attribute("src").split("=")[:-1])
+                        "url": badges_and_stickers_element.get_attribute("src").rsplit("=", 1)[0]
                     })
 
             return channel_name, result
